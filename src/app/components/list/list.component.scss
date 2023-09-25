@@ -1,0 +1,16 @@
+.sidebar__ul {
+    .sidebar__li {
+        padding: 0.5rem 1rem;
+        border-radius: 0.5rem;
+        margin-bottom: 0.5rem;
+        font-weight: 600;
+        &:hover {
+            background-color: var(--item-bg);
+        }
+        &.active {
+            background-color: var(--primary-color);
+            color: white;
+            box-shadow: 0 0.4rem 1rem 0 rgba(0, 0, 0, 0.1);
+        }
+    }
+}

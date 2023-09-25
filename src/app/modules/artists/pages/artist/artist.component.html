@@ -1,0 +1,24 @@
+<div class="container__header" *ngIf="artist">
+    <div class="container__header--info info">
+        <h1 class="info__name">{{artist.name}}</h1>
+        <span class="info__genres">
+            <span class="genre" *ngFor="let genre of artist.genres">
+                {{genre}}
+            </span>
+        </span>
+    </div>
+    <div class="container__header--img img" *ngIf="artist.images">
+        <img class="img__image" src={{artist.images[0].url}} alt={{artist.name}} loading="lazy" />
+    </div>
+</div>
+<div class="container__body">
+    <h3>Discography</h3>
+    <div class="container__albums">
+        <shared-item-box *ngFor="let album of albums.items" [data]="{
+            images: album.images,
+            name: album.name,
+            subtitle: album.release_date.split('-')[0] + ' - ' + album.album_type
+        }"
+        routerLink="/albums/{{album.id}}"></shared-item-box>
+    </div>
+</div>

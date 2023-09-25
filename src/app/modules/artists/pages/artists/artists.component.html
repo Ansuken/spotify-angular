@@ -1,0 +1,17 @@
+<div class="container__header">
+    <div class="container__header--info info">
+        <h2 class="info__name">Followed artists</h2>
+    </div>
+</div>
+<div class="container__body">
+    <div class="container__artists">
+        <shared-item-box 
+        *ngFor="let item of artistsCollection.artists.items"
+        [data]="{
+            images: item.images,
+            name: item.name,
+            subtitle: ''
+        }"
+        routerLink="{{item.id}}"></shared-item-box>
+    </div>
+</div>

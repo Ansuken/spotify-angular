@@ -1,0 +1,16 @@
+<div class="item" *ngIf="data">
+    <img 
+        class="item__img"
+        [src]="data.images && data.images.length > 0 ? data.images[0].url : '../assets/no-image.png'"
+        alt={{data.name}}
+        loading="lazy"
+    />
+    <div class="item__text">
+        <h4 class="item__name">
+            {{data.name}}
+        </h4>
+        <h5 class="item__subtitle">
+            {{data.subtitle}}
+        </h5>
+    </div>
+</div>

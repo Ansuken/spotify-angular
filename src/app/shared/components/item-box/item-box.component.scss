@@ -1,0 +1,19 @@
+.item {
+    cursor: pointer;
+    padding: 1em;
+    background-color: var(--card-bg);
+    border-radius: 0.5em;
+    transition: all 0.3s;
+    &:hover {
+        background-color: var(--card-bg-hover);
+    }
+}
+.item__name {
+    font-weight: 700;
+    font-size: 0.8rem;
+}
+
+.item__subtitle {
+    font-weight: 200;
+    font-size: 0.6rem;
+}

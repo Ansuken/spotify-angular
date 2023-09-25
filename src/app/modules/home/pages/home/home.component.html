@@ -1,0 +1,26 @@
+<div class="container__header">
+    <div class="container__header--info info">
+        <h2 class="info__name">Welcome</h2>
+    </div>
+</div>
+<div class="container__body">
+    <h3>{{playlists.message}}</h3>
+    <div class="container__playlists">
+        <shared-item-box *ngFor="let item of playlists.playlists.items" [data]="{
+            images: item.images,
+            name: item.name,
+            subtitle: item.tracks.total + ' songs'
+        }"
+        routerLink="/playlists/{{item.id}}"></shared-item-box>
+    </div>
+
+    <h3>New Releases</h3>
+    <div class="container__playlists">
+        <shared-item-box *ngFor="let item of newReleases.albums.items" [data]="{
+            images: item.images,
+            name: item.name,
+            subtitle: item.total_tracks + ' songs'
+        }"
+        routerLink="/playlists/{{item.id}}"></shared-item-box>
+    </div>
+</div>

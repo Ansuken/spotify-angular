@@ -1,0 +1,23 @@
+.track__img {
+    width: 2rem;
+    height: 2rem;
+    margin-right: 1em;
+}
+
+.track__artist {
+    font-weight: 200;
+    color: var(--border-color);
+    font-size: 0.8rem;
+}
+
+.track__artist {
+    cursor: pointer;
+    &:hover {
+        color: var(--primary-color);
+    }
+}
+
+.track__property {
+    display: flex;
+    align-items: center;
+}

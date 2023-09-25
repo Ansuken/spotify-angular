@@ -1,0 +1,20 @@
+.main__sidebar {
+    width: 15rem;
+    min-height: 100%;
+    background-color: var(--sidebar-bg);
+    padding: 1.5rem;
+
+    .sidebar__brand {
+        margin-bottom: 2rem;
+        cursor: pointer;
+    }
+
+    
+
+    .sidebar__category {
+        padding: 0 1rem;
+        margin-bottom: 0.5rem;
+        color: var(--gray-text);
+        font-weight: 700;
+    }
+}

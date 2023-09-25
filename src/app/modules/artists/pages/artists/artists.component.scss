@@ -1,0 +1,34 @@
+.container__header {
+    padding: 2em;
+}
+.container__body {
+    padding: 2em;
+}
+
+.container__artists {
+    padding-top: 2rem;
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    grid-gap: 1em;
+}
+@media screen and (max-width: 1600px) {
+    .container__artists {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+@media screen and (max-width: 1260px) {
+    .container__artists {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+@media screen and (max-width: 960px) {
+    .container__artists {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .container__artists {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}

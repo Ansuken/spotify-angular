@@ -1,0 +1,16 @@
+<ng-container *ngIf="track">
+    <div class="track__property">
+        <img *ngIf="track.album" src="{{track.album.length > 0 ? track.album.images[0].url : '../assets/no-image.png'}}" alt="{{track.name}}" loading="lazy" class="track__img" />
+        <div class="track__info">
+            <div class="track__name">{{track.name}}</div>
+            <div class="track__artist">
+                <span 
+                    class="track__artist"
+                    *ngFor="let artist of track.artists"
+                    routerLink="/artists/{{artist.id}}">
+                    {{artist.name}}, 
+                </span>
+            </div>
+        </div>
+    </div>
+</ng-container>

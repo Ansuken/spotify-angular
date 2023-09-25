@@ -1,0 +1,34 @@
+.tracklist__item{
+    display: grid;
+    grid-template-columns: 2rem 3fr 2fr 1fr 1fr;
+    padding: 1em;
+    align-items: center;
+}
+
+.item {
+    border-bottom: 1px solid var(--border-color);
+}
+
+.track {
+    cursor: pointer;
+    &:hover {
+        cursor: pointer;
+        background-color: var(--hover-color);
+    }
+}
+
+.item__header {
+    font-weight: 200;
+}
+
+.track__property {
+    display: flex;
+    align-items: center;
+}
+
+.track__album {
+    cursor: pointer;
+    &:hover {
+        color: var(--primary-color);
+    }
+}

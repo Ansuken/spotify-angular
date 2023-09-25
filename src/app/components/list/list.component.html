@@ -1,0 +1,9 @@
+<ul class="sidebar__ul">
+    <li 
+        *ngFor="let item of list"
+        class="sidebar__li pointer"
+        routerLink={{item.path}}
+        routerLinkActive="active">
+        {{item.name}}
+    </li>
+</ul>

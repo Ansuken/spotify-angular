@@ -1,0 +1,10 @@
+<div class="main__sidebar sidebar">
+    <div class="sidebar__brand" routerLink="home">
+        <img class="sidebar__brand-logo" src="assets/logo.svg" alt="Spotify"  loading="lazy"/>
+    </div>
+    <shared-list [list]="mainNavbar"></shared-list>
+    <div class="sidebar__category">
+        MY LIBRARY
+    </div>
+    <shared-list [list]="myNavbar"></shared-list>
+</div>

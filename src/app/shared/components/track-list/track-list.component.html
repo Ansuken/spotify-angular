@@ -1,0 +1,18 @@
+<div class="tracklist" *ngIf="tracklist">
+    <div class="tracklist__item item">
+        <div class="item__header">#</div>
+        <div class="item__header">Title</div>
+        <div class="item__header" *ngIf="type==='playlist'">Album</div>
+        <div class="item__header" *ngIf="type==='playlist'">Added at</div>
+        <div class="item__header">Duration</div>
+    </div>
+    <div class="tracklist__item track" *ngFor="let item of tracklist.items; let i = index;">
+        <div class="track__property">{{i+1}}</div>
+        <track-list-name [track]="item.track || item"></track-list-name>
+        <div class="track__property" *ngIf="item.track">
+            <span class="track__album" routerLink="/album/{{item.track.album.id}}">{{item.track.album.name}}</span>
+        </div>
+        <div class="track__property" *ngIf="item.added_at">{{item.added_at | date}}</div>
+        <div class="track__property">{{msToTime(item.track ? item.track.duration_ms: item.duration_ms)}}</div>
+    </div>
+</div>

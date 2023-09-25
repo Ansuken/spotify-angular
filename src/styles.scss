@@ -1,1 +1,110 @@
-/* You can add global styles to this file, and also import other style files */
+@use './_reset.scss';
+
+:root {
+    --primary-color: #1DB954;
+    --primary-color-hover: #1a9e48;
+    --gray-text: #cccccc;
+    --text-color: #333;
+    --hover-color: #f3f3f3;
+
+    --font-family: 'Poppins', sans-serif;
+    --font-weight: 400;
+
+    --sidebar-bg: #f7f7f7;
+    --border-color: #aaaaaa;
+    --website-bg: #FFFFFF;
+    --item-bg: #FFFFFF;
+
+    --card-bg: #eeeeee;
+    --card-bg-hover: #DADADA;
+}
+[data-theme="dark-theme"] {
+    --gray-text: #999999;
+    --text-color: #FFFFFF;
+    --hover-color: #090909;
+
+    --sidebar-bg: #121212;
+    --border-color: #aaaaaa;
+    --website-bg: #000000;
+    --item-bg: #1a1a1a;
+
+    --card-bg: #181818;
+    --card-bg-hover: #282828;
+}
+body {
+    background: var(--website-bg);
+    color: var(--text-color);
+    font-family: var(--font-family);
+    font-weight: var(--font-weight);
+    line-height: 1.5;
+    margin: 0 auto;
+}
+
+::-moz-selection {
+    color: var(--text-color-invert);
+    background-color: var(--primary-color);
+}
+  
+::selection {
+    color: var(--text-color-invert);
+    background-color: var(--primary-color);
+}
+
+.pointer {
+    cursor: pointer;
+}
+
+a {
+    text-decoration: none;
+    color: var(--primary-color);
+    font-weight: 600;
+    
+    &.invert {
+        color: var(--text-color-invert);
+        &:hover{
+            color: var(--secondary-color);
+        }
+    }
+    &:hover {
+        color: var(--primary-color-hover);
+    }
+}
+
+h1 {
+    font-size: 6em;
+    line-height: 0.9em;
+    letter-spacing: -0.06em;
+    font-weight: 700;
+}
+
+h2 {
+    font-size: 3.5em;
+    line-height: 0.9em;
+    font-weight: 700;
+}
+
+h3 {
+    font-size: 2em;
+    line-height: 0.9em;
+    font-weight: 700;
+}
+
+img {
+    width: 100%;
+}
+
+.w-100 {
+    font-weight: 100;
+}
+.w-200 {
+    font-weight: 200;
+}
+.w-300 {
+    font-weight: 300;
+}
+.w-700 {
+    font-weight: 700;
+}
+.w-900 {
+    font-weight: 900;
+}

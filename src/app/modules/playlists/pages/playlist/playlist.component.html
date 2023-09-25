@@ -1,0 +1,21 @@
+<div class="container__header" *ngIf="tracks && playlist">
+    <div class="container__header--img img">
+        <img [src]="playlist.images.length > 0 ? playlist.images[0].url : '../assets/no-image.png'" alt={{playlist.name}} loading="lazy" />
+    </div>
+    <div class="container__header--info info">
+        <div class="info__details">
+            <h2 class="info__details--name">{{playlist.name}}</h2>
+            <span class="info__details--description">{{playlist.description}}</span>
+        </div>
+        <div class="info__details">
+            <span class="info__details--metadata">
+                {{playlist.owner.display_name}} - {{playlist.tracks.total}} songs
+            </span>
+        </div>
+    </div>
+</div>
+<div class="container__body" *ngIf="tracks && playlist">
+    <div class="container__playlist">
+        <shared-track-list [tracklist]="tracks" [type]="playlist.type"></shared-track-list>
+    </div>
+</div>
